@@ -1,23 +1,6 @@
-def create_nodes(arr):
-    head = curr = ListNode()
-    for a in arr:
-        curr.next = ListNode()
-        curr.next.data = a
-        curr = curr.next
-    return head.next
+from utils import *
 
-def print_nodes(head):
-    curr = head
-    while curr:
-        print(curr.data)
-        curr = curr.next
-
-class ListNode:
-    def __init__(self, data=0, next=None):
-        self.data = data
-        self.next = next
-
-def add_two_numbers(n1, n2):
+def add_two_numbers(n1:ListNode, n2:ListNode):
     carry = 0
     head = cur = ListNode(0)
     while n1 or n2 or carry:

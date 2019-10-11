@@ -1,25 +1,6 @@
-from typing import Optional
+from utils import *
 
-def create_nodes(arr):
-    head = curr = ListNode()
-    for a in arr:
-        curr.next = ListNode()
-        curr.next.data = a
-        curr = curr.next
-    return head.next
-
-def print_nodes(head):
-    curr = head
-    while curr:
-        print(curr.data)
-        curr = curr.next
-
-class ListNode:
-    def __init__(self, data=0, next=None):
-        self.data = data
-        self.next = next
-
-def delete_kth_last_from_list(node, k):
+def delete_kth_last_from_list(node:ListNode, k):
     runner = head = node
     for i in range(k):
         runner = runner.next

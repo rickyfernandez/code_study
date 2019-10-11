@@ -1,23 +1,4 @@
-from typing import Optional
-
-def create_nodes(arr):
-    head = curr = ListNode()
-    for a in arr:
-        curr.next = ListNode()
-        curr.next.data = a
-        curr = curr.next
-    return head.next
-
-def print_nodes(head):
-    curr = head
-    while curr:
-        print(curr.data)
-        curr = curr.next
-
-class ListNode:
-    def __init__(self, data=0, next=None):
-        self.data = data
-        self.next = next
+from utils import *
 
 def list_pivot(l, x):
     head_less = tail_less = ListNode(0)

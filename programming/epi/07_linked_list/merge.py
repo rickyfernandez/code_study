@@ -1,25 +1,6 @@
-from typing import Optional
+from utils import *
 
-def create_nodes(arr):
-    head = curr = ListNode()
-    for a in arr:
-        curr.next = ListNode()
-        curr.next.data = a
-        curr = curr.next
-    return head.next
-
-def print_nodes(head):
-    curr = head
-    while curr:
-        print(curr.data)
-        curr = curr.next
-
-class ListNode:
-    def __init__(self, data=0, next=None):
-        self.data = data
-        self.next = next
-
-def merge_two_sorted_lists(n1, n2):
+def merge_two_sorted_lists(n1:ListNode, n2:ListNode):
     head = curr = ListNode()
     while n1 and n2:
         if n1.data < n2.data:
