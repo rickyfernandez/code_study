@@ -4,6 +4,9 @@ class BinaryTreeNode:
         self.left = left
         self.right = right
 
+def is_leaf(node):
+    return node.left is None and node.right is None
+
 def create_tree(arr):
     def _create(node, index):
         if node is None or index >= len(arr):
